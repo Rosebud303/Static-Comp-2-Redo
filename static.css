@@ -1,8 +1,122 @@
-body {
-	display: grid;
+* {
+	padding: 0;
+	font-family: Helvetica, sans-serif;
 }
 
-.side-nav-bar {
+body {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 150px;
+	grid-template-rows: 200px 4fr;
+	grid-template-areas: 
+	"side top top"
+	"side bot bot"
+	"side bot bot";
+}
+
+aside {
+    font-size: small;
+	grid-area: side;
 	background-color: rgb(55, 64, 80);
-	
+	color: #8995A6;	
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    align-items: center;
+}
+
+.fa-angle-down {
+
+}
+
+.user-img {
+	text-align: center;
+}
+
+.nav-img {
+    border: 1px solid black;
+    border-radius: 64%;
+    margin-top: 20px;
+    width: 65px;
+}
+
+.nav {
+    border-top: 1px #282B30 solid;
+}
+
+.nav-title {
+    padding-left: 13px;
+    color: #546178;
+}
+
+.nav-link {
+    padding-left: 5px;	
+}
+
+.nav-link:hover {
+	padding-left: 2px;
+	border-left: 3px #61DFF5 solid;
+	background:  #282B30;
+	color: white;
+}
+
+.fab, .fas {
+    padding: 7px;
+}
+
+.square1 {
+	color: yellow;
+}
+
+.square2 {
+	color: #5BD5E8;
+}
+
+.square3 {
+	color: red;
+}
+
+.square4 {
+	color: #54C67D;
+}
+
+header {
+	grid-area: top;
+	background: red;
+}
+
+.input-header {
+	display: grid;
+    grid-template-columns: .5fr 5fr .5fr .5fr .5fr;
+    height: 45px;
+}
+
+/*.csr-top {
+	grid-template-areas: 
+	"left right"
+	"bottom bottom";
+}
+
+.csr-title {
+	grid-area: left;
+}
+*/
+.location {
+	display: flex;
+}
+
+/*.csr-buttons {
+	grid-area: right;
+}
+
+.csr-links {
+	grid-area: bottom;
+}*/
+
+main {
+	grid-area: bot;
+	background: green;
 }
