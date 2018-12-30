@@ -4,6 +4,7 @@
 }
 
 body {
+	margin: auto 0px auto 0px;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 150px;
@@ -28,10 +29,6 @@ aside {
     align-items: center;
 }
 
-.fa-angle-down {
-
-}
-
 .user-img {
 	text-align: center;
 }
@@ -48,11 +45,13 @@ aside {
 }
 
 .nav-title {
+	font-size: 10px;
     padding-left: 13px;
     color: #546178;
 }
 
 .nav-link {
+	font-size: 11px;
     padding-left: 5px;	
 }
 
@@ -85,36 +84,61 @@ aside {
 
 header {
 	grid-area: top;
-	background: red;
+/*	background: red;*/
 }
 
-.input-header {
+.header-search {
 	display: grid;
     grid-template-columns: .5fr 5fr .5fr .5fr .5fr;
     height: 45px;
+    border-bottom: 2px #DBDEDF solid;
 }
 
-/*.csr-top {
-	grid-template-areas: 
-	"left right"
-	"bottom bottom";
+
+.header-input {
+    border: none;
+	font-size: larger;
+    height: 100%;
+    margin-top: 0px;
+    width: 95%;
+}
+
+::placeholder {
+	color: #DBDEDF;
+}
+.header-top, .search-box {
+	border-left: 2px #DBDEDF solid;
+}
+
+.header-top {
+
+}
+
+.csr-top {
+	display: flex;
+	justify-content: space-between;
 }
 
 .csr-title {
-	grid-area: left;
-}
-*/
-.location {
-	display: flex;
+
 }
 
-/*.csr-buttons {
-	grid-area: right;
+.location {
+	display: flex;
+	justify-content: center;
+}
+
+.csr-buttons {
+	display: flex;
+	align-items: center;
+	padding: 20px;
 }
 
 .csr-links {
-	grid-area: bottom;
-}*/
+	display: flex;
+	justify-content: space-around;
+}
+
 
 main {
 	grid-area: bot;
