@@ -1,11 +1,10 @@
 * {
-	padding: 0;
+	box-sizing: border-box;
 	font-family: Helvetica, sans-serif;
+	padding: 0;
 }
 
 body {
-	margin: auto 0px auto 0px;
-	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 150px;
 	grid-template-rows: 200px 4fr;
@@ -13,20 +12,21 @@ body {
 	"side top top"
 	"side bot bot"
 	"side bot bot";
+	margin: auto 0px auto 0px;
 }
 
 aside {
-    font-size: small;
-	grid-area: side;
 	background-color: rgb(55, 64, 80);
 	color: #8995A6;	
+    font-size: small;
+	grid-area: side;
 }
 
 .profile-picture {
-    display: flex;
-    justify-content: center;
-    height: 140px;
     align-items: center;
+    display: flex;
+    height: 140px;
+    justify-content: center;
 }
 
 .user-img {
@@ -45,9 +45,9 @@ aside {
 }
 
 .nav-title {
+    color: #546178;
 	font-size: 10px;
     padding-left: 13px;
-    color: #546178;
 }
 
 .nav-link {
@@ -56,10 +56,10 @@ aside {
 }
 
 .nav-link:hover {
-	padding-left: 2px;
-	border-left: 3px #61DFF5 solid;
 	background:  #282B30;
+	border-left: 3px #61DFF5 solid;
 	color: white;
+	padding-left: 2px;
 }
 
 .fab, .fas {
@@ -84,34 +84,55 @@ aside {
 
 header {
 	grid-area: top;
-/*	background: red;*/
 }
 
 .header-search {
+    border-bottom: 2px #DBDEDF solid;
 	display: grid;
     grid-template-columns: .5fr 5fr .5fr .5fr .5fr;
     height: 45px;
-    border-bottom: 2px #DBDEDF solid;
 }
 
 
 .header-input {
     border: none;
 	font-size: larger;
-    height: 100%;
     margin-top: 0px;
     width: 95%;
 }
 
-::placeholder {
-	color: #DBDEDF;
+.search-box {
+	display: flex;
+	align-items: center;
 }
+
+::placeholder {
+	color: #AEB0B0;
+}
+
+.input-img {
+	color: #AEB0B0;
+	margin: 0;
+}
+
 .header-top, .search-box {
 	border-left: 2px #DBDEDF solid;
+	margin: 0;
 }
 
-.header-top {
+.header-top1, .header-top {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #AEB0B0;
+	font-size: x-large;
+	margin: 0;
+}
 
+.header-top:hover,
+.header-top1:hover {
+	background: #20B9FF;
+	color: white;
 }
 
 .csr-top {
@@ -129,18 +150,31 @@ header {
 }
 
 .csr-buttons {
-	display: flex;
 	align-items: center;
+	display: flex;
 	padding: 20px;
 }
 
 .csr-links {
+    color: #939595;
 	display: flex;
-	justify-content: space-around;
+    font-size: 12px;
+    font-weight: bold;
+	justify-content: start;
 }
 
+.csr-text {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.csr-text:hover {
+    border-bottom: 3px solid #61DFF5;
+    padding-bottom: 15px;
+    color: black;
+}
 
 main {
 	grid-area: bot;
-	background: green;
+	background: #DBDEDF;
 }
